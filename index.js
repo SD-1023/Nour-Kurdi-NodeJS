@@ -15,7 +15,8 @@ fs.readFile('config.json', 'utf8', (error, data) => {
                 if (error) {
                   console.log(`${filePath} not found`)
                 } else {
-                    wordCount(data) === 0 ? console.log(`${filePath} is empty`) : console.log(`${filePath}: ${wordCount(data)} words `)
+                    let word_count = wordCount(data)
+                    word_count === 0 ? console.log(`${filePath} is empty`) : console.log(`${filePath}: ${word_count} words `)
                 }
               })
         })
